@@ -1,0 +1,23 @@
+body{
+    color: white;
+    background-color: #000000;
+}
+
+
+header{
+    padding: 10px;
+}
+
+img{
+    border-radius: 5px;
+    width: 900px;
+}
+
+section{
+    display: flex;
+    justify-content: right;
+}
+
+p{
+    border-left: 10px;
+}
