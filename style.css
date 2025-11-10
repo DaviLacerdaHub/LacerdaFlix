@@ -51,7 +51,6 @@ header {
     top: 0;
     background: linear-gradient(135deg, #2d5145 0%, #284e41 100%);
     color: #ffffff;
-    padding: 5px ;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -77,7 +76,7 @@ h4 {
     font-size: 1.125rem;
     font-weight: 500;
     color: #e0e0e0;
-    margin: 12px 0;
+    margin: 12px;
     min-height: 50px;
     display: flex;
     align-items: center;
@@ -112,7 +111,7 @@ div:has(> h1:only-child) h1::after {
     height: 4px;
     background: linear-gradient(90deg, transparent, #2d5145, transparent);
     border-radius: 2px;
-}
+} 
 
 article {
     display: grid;
@@ -227,6 +226,7 @@ footer {
     font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
+
 
 @media (max-width: 1024px) {
     article {

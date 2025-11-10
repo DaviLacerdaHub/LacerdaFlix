@@ -1,23 +1,128 @@
-body{
-    color: white;
-    background-color: #000000;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-header{
-    padding: 10px;
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: linear-gradient(135deg, #1a3028 0%, #2d5145 100%);
+    color: #e8e8e8;
+    line-height: 1.8;
+    padding: 20px;
+    min-height: 100vh;
 }
 
-img{
-    border-radius: 5px;
-    width: 900px;
+/* Header */
+header {
+    background: linear-gradient(to right, #1a3028, #2d5145);
+    padding: 40px 30px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    border-left: 5px solid #4a7c68;
 }
 
-section{
-    display: flex;
-    justify-content: right;
+header h1 {
+    font-size: 2.8em;
+    color: #d4af37;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
-p{
-    border-left: 10px;
+/* Article */
+article {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(45, 81, 69, 0.3);
+    padding: 40px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Seções */
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 2em;
+    color: #d4af37;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #4a7c68;
+    font-weight: 600;
+}
+
+section h3 {
+    font-size: 1.5em;
+    color: #9db88f;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* Parágrafos */
+p {
+    font-size: 1.1em;
+    color: #d8d8d8;
+    text-align: justify;
+    margin-bottom: 20px;
+    text-indent: 30px;
+}
+
+/* Imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    margin: 20px 0;
+    border: 3px solid #2d5145;
+}
+
+/* Container de conteúdo */
+section > div {
+    background: rgba(26, 48, 40, 0.4);
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 4px solid #4a7c68;
+}
+
+/* Efeitos de hover para links (caso adicione) */
+a {
+    color: #9db88f;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #d4af37;
+    border-bottom: 1px solid #d4af37;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    
+    section h2 {
+        font-size: 1.6em;
+    }
+    
+    article {
+        padding: 20px;
+    }
+    
+    section > div {
+        width: 100% !important;
+        padding: 20px;
+    }
+    
+    p {
+        font-size: 1em;
+    }
 }
