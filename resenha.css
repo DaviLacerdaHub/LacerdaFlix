@@ -13,7 +13,7 @@ body {
     min-height: 100vh;
 }
 
-/* Header */
+
 header {
     background: linear-gradient(to right, #1a3028, #2d5145);
     padding: 40px 30px;
@@ -31,7 +31,7 @@ header h1 {
     letter-spacing: 1px;
 }
 
-/* Article */
+
 article {
     max-width: 1200px;
     margin: 0 auto;
@@ -42,7 +42,7 @@ article {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Seções */
+
 section {
     margin-bottom: 30px;
 }
@@ -63,7 +63,7 @@ section h3 {
     font-weight: 500;
 }
 
-/* Parágrafos */
+
 p {
     font-size: 1.1em;
     color: #d8d8d8;
@@ -72,7 +72,7 @@ p {
     text-indent: 30px;
 }
 
-/* Imagens */
+
 img {
     max-width: 100%;
     height: auto;
@@ -82,7 +82,6 @@ img {
     border: 3px solid #2d5145;
 }
 
-/* Container de conteúdo */
 section > div {
     background: rgba(26, 48, 40, 0.4);
     padding: 30px;
@@ -90,7 +89,6 @@ section > div {
     border-left: 4px solid #4a7c68;
 }
 
-/* Efeitos de hover para links (caso adicione) */
 a {
     color: #9db88f;
     text-decoration: none;
@@ -103,7 +101,6 @@ a:hover {
     border-bottom: 1px solid #d4af37;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2em;
