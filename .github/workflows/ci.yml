@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  pull_request:
+    branches: ["main"]
+  push:
+    branches: ["feature/**"]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validar HTML
+        run: npx --yes html-validate@11.19.0 "*.html"
+
+      # Linux diferencia maiúsculas de minúsculas, como o GitHub Pages.
+      - name: Checar links e imagens locais
+        run: |
+          missing=0
+          for f in *.html *.css; do
+            while IFS= read -r p; do
+              if [ ! -e "$p" ]; then
+                echo "::error file=$f::Arquivo nao encontrado: $p"
+                missing=1
+              fi
+            done < <(grep -oE "(href|src)=\"[^\"#:]+\"|url\([^)]+\)" "$f" \
+              | sed -E "s/^(href|src)=\"//; s/\"$//; s/^url\(['\"]?//; s/['\"]?\)$//")
+          done
+          exit $missing
